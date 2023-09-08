@@ -29,6 +29,172 @@ enabled
 [root@host1 ~]#
 ```
 
+```Shell
+[root@host1 ~]#
+[root@host1 ~]#  firewall-cmd --get-default-zone
+public
+[root@host1 ~]#
+[root@host1 ~]# firewall-cmd --get-active-zones
+public
+  interfaces: enp0s3
+[root@host1 ~]#
+[root@host1 ~]#
+[root@host1 ~]# firewall-cmd --list-all-zones
+block
+  target: %%REJECT%%
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services:
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+dmz
+  target: default
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services: ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+drop
+  target: DROP
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services:
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+external
+  target: default
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services: ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: yes
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+home
+  target: default
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services: cockpit dhcpv6-client mdns samba-client ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+internal
+  target: default
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services: cockpit dhcpv6-client mdns samba-client ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+nm-shared
+  target: ACCEPT
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services: dhcp dns ssh
+  ports:
+  protocols: icmp ipv6-icmp
+  forward: no
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+        rule priority="32767" reject
+
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: enp0s3
+  sources:
+  services: cockpit dhcpv6-client ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+trusted
+  target: ACCEPT
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services:
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+work
+  target: default
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services: cockpit dhcpv6-client ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+[root@host1 ~]#
+[root@host1 ~]#
+```
+
 ## 設定変更
 
 `systemctl`コマンドで停止、無効化ができる。
