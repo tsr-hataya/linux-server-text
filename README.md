@@ -21,10 +21,12 @@
 - [インストールされるパッケージ一覧](/almalinux9.2_packagelist.md)
 - [インストールされるコマンド一覧](/almalinux9.2_commandlist.md)
 - [インストールされるコマンド一覧 GuestAddtionインストール後](/almalinux9.2_commandlist_GA.md)
+- [OS情報](/almalinux9.2_osinfo.md)
 - [SELinuxについて](/almalinux9.2_selinux.md)
 - [Firewalldについて](/almalinux9.2_firewalld.md)
 - [systemdについて](/almalinux9.2_systemd.md)
 - [ネットワークについて](/almalinux9.2_network.md)
+- [リポジトリについて](/almalinux9.2_repo.md)
 
 
 ## サーバー構築
