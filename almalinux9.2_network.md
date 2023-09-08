@@ -307,3 +307,74 @@ IPv6を無効化する
 [root@host1 ~]# systemctl restart NetworkManager
 [root@host1 ~]#
 ```
+
+## その他の操作
+
+追加したNICを登録する。  
+ここではVirtualBoxでホストオンリーアダプターを追加した際の操作を例示しています。  
+
+```Shell
+[root@host00 ~]# 
+[root@host00 ~]# nmcli con
+NAME    UUID                                  TYPE      DEVICE 
+enp0s3  d1ce7368-eda2-34c4-a40a-f93122e9646f  ethernet  enp0s3 
+lo      6c022664-89ba-428f-826e-955b3bb3f507  loopback  lo     
+[root@host00 ~]#
+[root@host00 ~]# nmcli con add type ethernet ifname enp0s8 con-name enp0s8
+接続 'enp0s8' (7dc80882-d8b6-463b-8b33-c10b80fadc19) が正常に追加されました。
+[root@host00 ~]# 
+[root@host00 ~]# nmcli con
+NAME    UUID                                  TYPE      DEVICE 
+enp0s3  d1ce7368-eda2-34c4-a40a-f93122e9646f  ethernet  enp0s3 
+enp0s8  7dc80882-d8b6-463b-8b33-c10b80fadc19  ethernet  enp0s8 
+lo      6c022664-89ba-428f-826e-955b3bb3f507  loopback  lo     
+[root@host00 ~]# 
+[root@host00 ~]# nmcli con mod enp0s8 ipv4.addresses 192.168.56.10/24
+[root@host00 ~]# nmcli con mod enp0s8 ipv4.method manual
+[root@host00 ~]# 
+[root@host00 ~]# cat /etc/NetworkManager/system-connections/enp0s8.nmconnection 
+[connection]
+id=enp0s8
+uuid=7dc80882-d8b6-463b-8b33-c10b80fadc19
+type=ethernet
+interface-name=enp0s8
+timestamp=1694153318
+
+[ethernet]
+
+[ipv4]
+address1=192.168.56.10/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
+[root@host00 ~]# 
+[root@host00 ~]# reboot
+　　：
+＜再起動＞
+　　：
+[root@host00 ~]# 
+[root@host00 ~]# ip address show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:a7:55:1c brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.10/24 brd 192.168.1.255 scope global noprefixroute enp0s3
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fea7:551c/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:7b:97:6f brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.10/24 brd 192.168.56.255 scope global dynamic noprefixroute enp0s8
+       valid_lft 498sec preferred_lft 498sec
+    inet6 fe80::3669:14:5300:108/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+[root@host00 ~]# 
+```
