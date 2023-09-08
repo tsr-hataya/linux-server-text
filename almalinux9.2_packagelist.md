@@ -35,8 +35,6 @@ REDHAT_SUPPORT_PRODUCT_VERSION="9.2"
 - ベース環境：サーバー(GUI使用)
 - 選択した環境用のその他のソフトウェア：開発ツール
 
-Guest Additions インストール済み
-
 
 ```Shell
 [root@host1 ~]#
