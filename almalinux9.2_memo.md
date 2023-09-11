@@ -19,7 +19,12 @@ CentOS7では設定ファイル(`/etc/sysconfig/selinux`)を編集して再起�
 [almalinux9.2_selinux.md](/almalinux9.2_selinux.md)
 
 
-## ドメインは example.jp か example.com が良いのでは？
+## (solved)ドメインは example.jp か example.com が良いのでは？
+
+**-----解決方法-----**  
+`example.com` を使う  
+https://github.com/lpi-japan/server-text/blob/main/Chapter4.md
+**-----**
 
 インターネット上に `alpha.jp` や `beta.jp` が存在しないという保証はないので、例示用に使用が認められている `example.jp` や `example.com` が安心。
 
@@ -35,12 +40,7 @@ CentOS7では設定ファイル(`/etc/sysconfig/selinux`)を編集して再起�
 - 受講者Bホスト：192.168.1.**102** / host**102**.example.jp
 
 
-## (solved)DNSサーバーのドメイン構成はサブドメインにしたほうが良いのでは？
-
-**-----解決方法-----**  
-`example.com` を使う  
-https://github.com/lpi-japan/server-text/blob/main/Chapter4.md
-**-----**
+## DNSサーバーのドメイン構成はサブドメインにしたほうが良いのでは？
 
 - 講師ホスト：example.jp
 - 受講者Aホスト：alpha.example.jp
