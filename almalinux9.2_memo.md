@@ -23,7 +23,7 @@ CentOS7では設定ファイル(`/etc/sysconfig/selinux`)を編集して再起�
 
 **-----解決方法-----**  
 `example.com` を使う  
-https://github.com/lpi-japan/server-text/blob/main/Chapter4.md
+https://github.com/lpi-japan/server-text/blob/main/Chapter4.md  
 **-----**
 
 インターネット上に `alpha.jp` や `beta.jp` が存在しないという保証はないので、例示用に使用が認められている `example.jp` や `example.com` が安心。
