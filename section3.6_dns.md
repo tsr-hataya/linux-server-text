@@ -189,6 +189,21 @@ stub-zone:
 [root@host0 ~]#
 ```
 
+**(補足)**  
+※インターネットに接続する前提であれば必要な記述※  
+自分で名前解決できない場合に上位DNSに問い合わせをする設定。  
+BINDの `forwarder` に相当。  
+
+```Shell
+[root@host0 ~]#
+[root@host0 ~]# vi /etc/unbound/conf.d/forward.conf
+forward-zone:
+        name: "."
+        forward-addr: 8.8.8.8
+        forward-addr: 8.8.4.4
+```
+
+
 ### 3.6.6 unbound-keygenの起動
 
 ```Shell
@@ -228,8 +243,9 @@ drwxr-xr-x    2 root unbound    58  9月  8 16:48 local.d
 [root@host0 ~]#
 ```
 
-### 3.6.7 unbound-keygenの起動
+### 3.6.7 unboundの設定確認
 
+エラーがないケース
 ```Shell
 [root@host0 ~]#
 [root@host0 ~]# unbound-checkconf
@@ -237,6 +253,7 @@ unbound-checkconf: no errors in /etc/unbound/unbound.conf
 [root@host0 ~]#
 ```
 
+エラーになるケース
 ```Shell
 [root@host0 ~]#
 [root@host0 ~]#
