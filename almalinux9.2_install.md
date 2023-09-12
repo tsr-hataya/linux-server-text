@@ -8,90 +8,90 @@
 ## インストール
 
 0. aaa
-    ![install image 000](/images/ws000.jpg)
+    ![install image 000](/images/almalinux-install/ws000.jpg)
 
 0. aaa
-    ![install image 001](/images/ws001.jpg)
+    ![install image 001](/images/almalinux-install/ws001.jpg)
 
 0. aaa
-    ![install image 002](/images/ws002.jpg)
-    ![install image 002a](/images/ws002a.jpg)
-    ![install image 002b](/images/ws002b.jpg)
+    ![install image 002](/images/almalinux-install/ws002.jpg)
+    ![install image 002a](/images/almalinux-install/ws002a.jpg)
+    ![install image 002b](/images/almalinux-install/ws002b.jpg)
 
 0. aaa
-    ![install image 003](/images/ws003.jpg)
-    ![install image 003a](/images/ws003a.jpg)
+    ![install image 003](/images/almalinux-install/ws003.jpg)
+    ![install image 003a](/images/almalinux-install/ws003a.jpg)
 
 0. aaa
-    ![install image 004](/images/ws004.jpg)
-    ![install image 004a](/images/ws004a.jpg)
-    ![install image 004b](/images/ws004b.jpg)
+    ![install image 004](/images/almalinux-install/ws004.jpg)
+    ![install image 004a](/images/almalinux-install/ws004a.jpg)
+    ![install image 004b](/images/almalinux-install/ws004b.jpg)
 
 0. aaa
-    ![install image 005](/images/ws005.jpg)
-    ![install image 005a](/images/ws005a.jpg)
-    ![install image 005b](/images/ws005b.jpg)
-    ![install image 005c](/images/ws005c.jpg)
-    ![install image 005d](/images/ws005d.jpg)
-    ![install image 005e](/images/ws005e.jpg)
-    ![install image 005f](/images/ws005f.jpg)
-    ![install image 005g](/images/ws005g.jpg)
-    ![install image 005h](/images/ws005h.jpg)
+    ![install image 005](/images/almalinux-install/ws005.jpg)
+    ![install image 005a](/images/almalinux-install/ws005a.jpg)
+    ![install image 005b](/images/almalinux-install/ws005b.jpg)
+    ![install image 005c](/images/almalinux-install/ws005c.jpg)
+    ![install image 005d](/images/almalinux-install/ws005d.jpg)
+    ![install image 005e](/images/almalinux-install/ws005e.jpg)
+    ![install image 005f](/images/almalinux-install/ws005f.jpg)
+    ![install image 005g](/images/almalinux-install/ws005g.jpg)
+    ![install image 005h](/images/almalinux-install/ws005h.jpg)
 
 0. aaa
-    ![install image 006](/images/ws006.jpg)
-    ![install image 006a](/images/ws006a.jpg)
-    ![install image 006b](/images/ws006b.jpg)
+    ![install image 006](/images/almalinux-install/ws006.jpg)
+    ![install image 006a](/images/almalinux-install/ws006a.jpg)
+    ![install image 006b](/images/almalinux-install/ws006b.jpg)
 
 0. aaa
-    ![install image 007](/images/ws007.jpg)
-    ![install image 007a](/images/ws007a.jpg)
-    ![install image 007b](/images/ws007b.jpg)
+    ![install image 007](/images/almalinux-install/ws007.jpg)
+    ![install image 007a](/images/almalinux-install/ws007a.jpg)
+    ![install image 007b](/images/almalinux-install/ws007b.jpg)
 
 0. aaa
-    ![install image 008](/images/ws008.jpg)
+    ![install image 008](/images/almalinux-install/ws008.jpg)
 
 0. aaa
-    ![install image 009](/images/ws009.jpg)
+    ![install image 009](/images/almalinux-install/ws009.jpg)
 
 0. aaa
-    ![install image 010](/images/ws010.jpg)
+    ![install image 010](/images/almalinux-install/ws010.jpg)
 
 0. aaa
-    ![install image 011](/images/ws011.jpg)
+    ![install image 011](/images/almalinux-install/ws011.jpg)
 
 0. aaa
-    ![install image 012](/images/ws012.jpg)
+    ![install image 012](/images/almalinux-install/ws012.jpg)
 
 0. aaa
-    ![install image 013](/images/ws013.jpg)
+    ![install image 013](/images/almalinux-install/ws013.jpg)
 
 0. aaa
-    ![install image 014](/images/ws014.jpg)
+    ![install image 014](/images/almalinux-install/ws014.jpg)
 
 0. aaa
-    ![install image 015](/images/ws015.jpg)
+    ![install image 015](/images/almalinux-install/ws015.jpg)
 
 0. aaa
-    ![install image 016](/images/ws016.jpg)
+    ![install image 016](/images/almalinux-install/ws016.jpg)
 
 0. aaa
-    ![install image 017](/images/ws017.jpg)
+    ![install image 017](/images/almalinux-install/ws017.jpg)
 
 0. aaa
-    ![install image 018](/images/ws018.jpg)
+    ![install image 018](/images/almalinux-install/ws018.jpg)
 
 0. aaa
-    ![install image 019](/images/ws019.jpg)
+    ![install image 019](/images/almalinux-install/ws019.jpg)
 
 0. aaa
-    ![install image 020](/images/ws020.jpg)
+    ![install image 020](/images/almalinux-install/ws020.jpg)
 
 0. aaa
-    ![install image 021](/images/ws021.jpg)
+    ![install image 021](/images/almalinux-install/ws021.jpg)
 
 0. aaa
-    ![install image 022](/images/ws022.jpg)
+    ![install image 022](/images/almalinux-install/ws022.jpg)
 
 0. aaa
-    ![install image 023](/images/ws023.jpg)
+    ![install image 023](/images/almalinux-install/ws023.jpg)
