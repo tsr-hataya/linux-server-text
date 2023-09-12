@@ -16,7 +16,11 @@
 
 ## 共通事項
 
-- [気がついたことを記録するメモ](/almalinux9.2_memo.md)
+- [気がついたことを記録するメモ](/memo.md)
+- [想定される構成パターン](/diagram.md)
+
+## AlmaLinux9に関する情報
+
 - [インストール画面のキャプチャ](/almalinux9.2_install.md)
 - [インストールされるパッケージ一覧](/almalinux9.2_packagelist.md)
 - [インストールされるコマンド一覧](/almalinux9.2_commandlist.md)
