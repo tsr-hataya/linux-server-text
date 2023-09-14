@@ -36,5 +36,5 @@
 
 ## サーバー構築
 
-- [講師マシン DNSサーバー構築](/section3.6_dns_unbound.md)
-- [受講者マシン DNSサーバー構築](/section3.7_dns_bind.md)
+- [3.6 講師マシンへのDNSキャッシュサーバーの設定](/section3.6_dns_unbound.md)
+- [3.7 受講者マシンへのDNSサーバーの設定](/section3.7_dns_bind.md)
