@@ -38,3 +38,4 @@
 
 - [3.6 講師マシンへのDNSキャッシュサーバーの設定](/section3.6_dns_unbound.md)
 - [3.7 受講者マシンへのDNSサーバーの設定](/section3.7_dns_bind.md)
+- [3.8 リゾルバの変更](/section3.8_dns_changeresolver.md)
