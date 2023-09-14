@@ -616,43 +616,23 @@ alpha.jp mail is handled by 10 mail.alpha.jp.
 
 ```Shell
 [root@host1 ~]#
-[root@host1 ~]#
-[root@host1 ~]# dig alpha.jp azfr @192.168.1.101
+[root@host1 ~]# dig alpha.jp axfr @192.168.1.101
 
-; <<>> DiG 9.16.23-RH <<>> alpha.jp azfr @192.168.1.101
+; <<>> DiG 9.16.23-RH <<>> alpha.jp axfr @192.168.1.101
 ;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2564
-;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 1232
-;; QUESTION SECTION:
-;alpha.jp.                      IN      A
-
-;; AUTHORITY SECTION:
-alpha.jp.               3600    IN      SOA     host1.alpha.jp. root.alpha.jp. 2023091201 86400 3600 604800 10800
-
-;; Query time: 22 msec
-;; SERVER: 192.168.1.10#53(192.168.1.10)
-;; WHEN: Thu Sep 14 12:58:31 JST 2023
-;; MSG SIZE  rcvd: 84
-
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 59231
-;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
-;; WARNING: recursion requested but not available
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 1232
-; COOKIE: 765122ea6f76d93d01000000650284e7dd3512833a2de490 (good)
-;; QUESTION SECTION:
-;azfr.                          IN      A
-
-;; Query time: 0 msec
+alpha.jp.               10800   IN      SOA     host1.alpha.jp. root.alpha.jp. 2023091201 86400 3600 604800 10800
+alpha.jp.               10800   IN      NS      host1.alpha.jp.
+alpha.jp.               10800   IN      MX      10 mail.alpha.jp.
+host1.alpha.jp.         10800   IN      A       192.168.1.101
+mail.alpha.jp.          10800   IN      A       192.168.1.101
+vhost1.alpha.jp.        10800   IN      CNAME   www.alpha.jp.
+vhost2.alpha.jp.        10800   IN      CNAME   www.alpha.jp.
+www.alpha.jp.           10800   IN      A       192.168.1.101
+alpha.jp.               10800   IN      SOA     host1.alpha.jp. root.alpha.jp. 2023091201 86400 3600 604800 10800
+;; Query time: 1 msec
 ;; SERVER: 192.168.1.101#53(192.168.1.101)
-;; WHEN: Thu Sep 14 12:58:31 JST 2023
-;; MSG SIZE  rcvd: 61
+;; WHEN: Thu Sep 14 14:18:35 JST 2023
+;; XFR size: 9 records (messages 1, bytes 277)
 
 [root@host1 ~]#
 [root@host1 ~]# dig host1.alpha.jp @192.168.1.101
