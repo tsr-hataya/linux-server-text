@@ -36,4 +36,4 @@
 
 ## サーバー構築
 
-- [講師マシン DNSサーバー構築](/section3.6_dns.md)
+- [講師マシン DNSサーバー構築](/section3.6_dns_unbound.md)
