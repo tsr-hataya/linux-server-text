@@ -37,3 +37,4 @@
 ## サーバー構築
 
 - [講師マシン DNSサーバー構築](/section3.6_dns_unbound.md)
+- [受講者マシン DNSサーバー構築](/section3.7_dns_bind.md)
