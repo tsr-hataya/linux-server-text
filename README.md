@@ -48,6 +48,7 @@
 - 第5章 メールサーバーの構築
   - [5.4 Postfixのインストール](/section5.4_mail_postfix.md)
   - [5.5 アカウントの作成](/section5.5_mail_useradd.md)
+  - [5.6 メールの送受信](/section5.6_mail_send.md)
 
 
 - 第6章 ネットワークとセキュリティの管理
