@@ -5,8 +5,54 @@
 
 そのた気がついたこと  
 - インストール後に画面解像度を1024x768ぐらいに変更しておいたほうが良い。  
-- ホストにIPアドレスが割り当てられるタイミングと、postfixが起動するタイミングが合わないのか、自動起動を有効化しているpostfixが起動に失敗している時があるので、postfixが動作しているか確認をしたほうが良いかも。
 - Thunderbirdの初期設定を再度実施したい場合は `~/.thunderbird` を削除すれば良い。
+- ホストにIPアドレスが割り当てられるタイミングと、postfixが起動するタイミングが合わないのか、自動起動を有効化しているpostfixが起動に失敗している時があるので、postfixが動作しているか確認をしたほうが良いかも。
+
+  ```Shell
+  [root@host1 ~]#
+  [root@host1 ~]# systemctl status postfix
+  × postfix.service - Postfix Mail Transport Agent
+      Loaded: loaded (/usr/lib/systemd/system/postfix.service; enabled; preset: disabled)
+      Active: failed (Result: exit-code) since Wed 2023-09-27 16:32:45 JST; 53s ago
+      Process: 1065 ExecStartPre=/usr/sbin/restorecon -R /var/spool/postfix/pid/master.pid (code=exited, status=255/EXCEPTION)
+      Process: 1093 ExecStartPre=/usr/libexec/postfix/aliasesdb (code=exited, status=0/SUCCESS)
+      Process: 1118 ExecStartPre=/usr/libexec/postfix/chroot-update (code=exited, status=0/SUCCESS)
+      Process: 1132 ExecStart=/usr/sbin/postfix start (code=exited, status=1/FAILURE)
+          CPU: 97ms
+
+  9月 27 16:32:44 host1.alpha.jp systemd[1]: Starting Postfix Mail Transport Agent...
+  9月 27 16:32:44 host1.alpha.jp restorecon[1065]: /usr/sbin/restorecon: lstat(/var/spool/postfix/pid/master.pid) failed: No such file or directory
+  9月 27 16:32:44 host1.alpha.jp postfix[1132]: fatal: parameter inet_interfaces: no local interface found for 192.168.1.101
+  9月 27 16:32:45 host1.alpha.jp systemd[1]: postfix.service: Control process exited, code=exited, status=1/FAILURE
+  9月 27 16:32:45 host1.alpha.jp systemd[1]: postfix.service: Failed with result 'exit-code'.
+  9月 27 16:32:45 host1.alpha.jp systemd[1]: Failed to start Postfix Mail Transport Agent.
+  [root@host1 ~]# 
+  [root@host1 ~]# systemctl restart postfix
+  [root@host1 ~]#
+  [root@host1 ~]# systemctl status postfix
+  ● postfix.service - Postfix Mail Transport Agent
+      Loaded: loaded (/usr/lib/systemd/system/postfix.service; enabled; preset: disabled)
+      Active: active (running) since Wed 2023-09-27 16:35:19 JST; 1s ago
+      Process: 2446 ExecStartPre=/usr/sbin/restorecon -R /var/spool/postfix/pid/master.pid (code=exited, status=255/EXCEPTION)
+      Process: 2447 ExecStartPre=/usr/libexec/postfix/aliasesdb (code=exited, status=0/SUCCESS)
+      Process: 2449 ExecStartPre=/usr/libexec/postfix/chroot-update (code=exited, status=0/SUCCESS)
+      Process: 2450 ExecStart=/usr/sbin/postfix start (code=exited, status=0/SUCCESS)
+    Main PID: 2518 (master)
+        Tasks: 3 (limit: 10992)
+      Memory: 4.4M
+          CPU: 414ms
+      CGroup: /system.slice/postfix.service
+              tq2518 /usr/libexec/postfix/master -w
+              tq2519 pickup -l -t unix -u
+              mq2520 qmgr -l -t unix -u
+
+  9月 27 16:35:19 host1.alpha.jp systemd[1]: Starting Postfix Mail Transport Agent...
+  9月 27 16:35:19 host1.alpha.jp restorecon[2446]: /usr/sbin/restorecon: lstat(/var/spool/postfix/pid/master.pid) failed: No such file or directory
+  9月 27 16:35:19 host1.alpha.jp postfix/postfix-script[2516]: starting the Postfix mail system
+  9月 27 16:35:19 host1.alpha.jp postfix/master[2518]: daemon started -- version 3.5.9, configuration /etc/postfix
+  9月 27 16:35:19 host1.alpha.jp systemd[1]: Started Postfix Mail Transport Agent.
+  [root@host1 ~]#
+  ```
 
 
 ## 5.7 メールクライアントソフトでのメールの送受信
